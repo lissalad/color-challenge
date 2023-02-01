@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import SwatchRow from "./components/SwatchRow";
 import Text from "./components/Text";
+import PlayAgain from "./components/PlayAgain";
 
 function App() {
   const [colors, setColors] = useState([
@@ -13,13 +14,10 @@ function App() {
   const [correctColor, setCorrectColor] = useState(colors[randomIndex()]);
   const [guess, setGuess] = useState(null);
 
-  console.log(correctColor);
   // console.log((16).toString(16));
   // for (let i = 0; i < 3; i += 1) {
   //   setColors(colors[i] = );
   // }
-
-  console.log(colors);
 
   function randomIndex() {
     return Math.floor(Math.random() * 3);
@@ -42,12 +40,11 @@ function App() {
 
   return (
     <div className="App">
-      <SwatchRow
-        colors={colors}
-        correctColor={correctColor}
-        setGuess={setGuess}
-      />
-      <Text correctColor={correctColor} guess={guess} />
+      <div className="game">
+        <SwatchRow colors={colors} setGuess={setGuess} />
+        <Text correctColor={correctColor} guess={guess} />
+        <PlayAgain />
+      </div>
     </div>
   );
 }

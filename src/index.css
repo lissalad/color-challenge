@@ -1,3 +1,20 @@
+.App {
+  display:flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.game {
+  display:flex;
+
+  flex-direction: column;
+  width: fit-content;
+  padding: 50px;
+  background-color: rgb(228, 228, 228);
+  border: rgb(200, 200, 200) solid 5px;
+}
+
 #swatches {
   display: flex;
   flex-direction: row;
@@ -6,7 +23,36 @@
 .swatch {
   height: 100px;
   width: 100px;
-  margin: 4px;
-  border: rgb(255, 255, 255) solid 2px;
+  margin: 5px;
+  border: rgba(255, 255, 255, 0.892) solid 2px;
   border-radius: 4px;
+  transition-duration: 200ms;
+
+}
+
+.swatch:hover {
+  height: 110px;
+  width: 110px;
+  margin:0;
+  transition-duration: 200ms;
+}
+
+#play-again-button {
+  padding: 15px 50px;
+  background-color: rgb(129, 129, 174);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 22px;
+  border: rgb(200, 200, 200) solid 5px;
+
+}
+
+#play-again-button:hover {
+  background-color: rgb(115, 115, 154);
+
+}
+
+#root, body, html {
+  height: 100%;
 }
