@@ -6,6 +6,7 @@ export default function Swatch(props) {
         backgroundColor: color,
       }}
       className="swatch"
+      onClick={() => props.setGuess(props.color)}
     ></div>
   );
 }
